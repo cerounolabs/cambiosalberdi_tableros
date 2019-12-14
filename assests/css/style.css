@@ -1,0 +1,124 @@
+html {
+    width: 100%;
+    height: 100%;
+    font-size: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.50);
+    color: #000000;
+    margin: 0px;
+    line-height: 1.8;
+}
+
+.div-container{
+    width: 100%;
+    height: 100%;
+}
+
+.card{
+    background-color: rgba(255, 255, 255, 0.95)
+}
+
+.card-footer{
+    background-color: rgba(11, 97, 56, 0.9);
+    
+}
+
+.text-muted{
+    color: white !important;
+    font-weight: bold !important;
+    font-size: 3rem;
+}
+
+.card-text{
+    font-size: 5rem;
+    font-weight: bold;
+    letter-spacing: 0.25rem;
+    font-family: 'Quantico', sans-serif;
+}
+
+.logo-contanier {
+    position: absolute;
+    bottom: 2.5%;
+    right: 100px;
+    overflow: hidden;
+}
+
+.fondo {
+    background-image: url('../../img/fondo04.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-origin: unset;
+    background-size: cover;
+    opacity: 1;
+}
+
+.table-container {
+    position: absolute;
+    top: 2.5%;
+    left: 15%;
+    width: 70%;
+    height: 90%;
+    overflow: hidden;
+    background-color: whitesmoke;
+    border: 5px black solid;
+    border-radius: 10px;
+}
+
+.tr-row-00 {
+    font-family: Arial Black; 
+    font-weight: bold; 
+    color: white; 
+    background-color: rgba(11, 97, 56, 0.8);
+    font-size: 80px;
+}
+
+.tr-row-01 {
+    font-family: Arial Black; 
+    color: white; 
+    background-color: rgba(11, 97, 56, 1);
+    font-size: 80px;
+}
+
+.td-img {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}
+
+.td-moneda {
+    text-align: left;
+}
+
+.img-00{
+    max-width: 250px;
+    max-height: 250px;
+}
+
+.img-01{
+    width: 50px;
+    height: 50px;
+}
+
+.img-logo{
+    width: 250px;
+    height: 250px;
+    -webkit-animation-name: framelogo; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: 5; /* Safari 4.0 - 8.0 */
+    animation-name: framelogo;
+    animation-duration: 2s;
+    animation-iteration-count: 5;
+}
+
+@-webkit-keyframes framelogo {
+
+}
+
+@keyframes framelogo {
+
+}
