@@ -1,17 +1,17 @@
 <?php
 	$min = date('i');
 
-	ibase_connect("10.168.190.130:aliadocambios", "sysdba", "dorotea");
+	ibase_connect("192.168.0.200:aliadocambios", "sysdba", "dorotea");
 	
-	$qryUSD_PYG	= ibase_query("SELECT * FROM COTIZACIONESMONEDAS WHERE ID_TIPOCOTIZACION = 1 AND ID_MONEDA = 3");
-	$rowUSD_PYG = ibase_fetch_object($qryUSD_PYG);
-	$id			= 'moneda01';
+	$qryBRL_PYG	= ibase_query("SELECT * FROM COTIZACIONESMONEDAS WHERE ID_TIPOCOTIZACION = 1 AND ID_MONEDA = 4");
+	$rowBRL_PYG = ibase_fetch_object($qryBRL_PYG);
+	$id			= 'moneda02';
 	$cheque		= 'NO';
-	$moneda		= 'DOLAR X GUARANIES';
-	$imagen 	= 'dolar.png';
-	$compra 	= $rowUSD_PYG->TCCOMPRABB;
-	$venta		= $rowUSD_PYG->TCVENTABB;
-	$dBBUSD_PYG = array(
+	$moneda		= 'REAL x GUARANIES';
+	$imagen		= 'real.png';
+	$compra		= $rowBRL_PYG->TCCOMPRABB;
+	$venta		= $rowBRL_PYG->TCVENTABB;
+	$dBBBRL_PYG = array(
 		'codigo'	=> $id,
 		'cheque'	=> $cheque,
 		'moneda'	=> $moneda,
@@ -20,7 +20,7 @@
 		'venta'		=> number_format($venta, 0, ',', '.')
 	);
 
-	$JSONTablero01[] = $dBBUSD_PYG;
+	$JSONTablero01[] = $dBBBRL_PYG;
 ?>
 
 <!DOCTYPE html>
@@ -39,63 +39,64 @@
 		<title>TABLERO COTIZACIÓN</title>
 		<style>
 			html{
-				width: 240px;
-				height: 160px;
+				width: 192px;
+				height: 120px;
 			}
 
 			body{
 				width: 100%;
 				height: 100%;
-				background-color: rgba(255, 255, 204, 0.50);
 				color: #000000;
-				background-color: #333333;
+				background-color: #15A346;
 				margin: 0px;
 			}
 
 			.tituloMoneda{
 				text-align: center;
 				Font-family: Arial Black;
-				color: #cccccc;
-				font-size: 18px;
+				color: #ffffff;
+				font-size: 16px;
 			}
 
 			.tituloCotizacion{
 				text-align: center;
 				Font-family: Arial Black;
 				color: #01ffcd;
-				font-size: 16px;
-				letter-spacing: 0.30rem;
+				color: #ffffff;
+				font-size: 15px;
+				letter-spacing: 0.20rem;
 			}
 
 			.tituloImporte{
 				text-align: center;
 				font-family: 'Quantico', sans-serif;
 				font-weight: bold;
-				color: #cccccc;
-				font-size: 26px;
-				letter-spacing: 0.30rem;
+				color: #ffff00;
+				font-size: 20px;
+				letter-spacing: 0.20rem;
+				transform: scaleY(2);
 			}
 		</style>
 	</head>
 	<body>
-		<table style="width:100%; height:100%; text-align:center; border:1px solid #333333;" border="1" cellpadding="0" cellspacing="0">
+		<table style="width:100%; height:100%; text-align:center; border:1px solid #15A346;" border="1" cellpadding="0" cellspacing="0">
 <?php
 	$nroRow = 0;
 	
 	foreach ($JSONTablero01 as $tableroKEY => $tableroVALUE) {
 ?>
-			<tr style="border:1px solid #333333;">
-				<td class="tituloMoneda" style="border:1px solid #333333;" colspan="2"><?php echo $tableroVALUE['moneda']; ?></td>
+			<tr style="border:1px solid #15A346; height:30px;">
+				<td class="tituloMoneda" style="border:1px solid #15A346;" colspan="2"><?php echo $tableroVALUE['moneda']; ?></td>
 			</tr>
 
-			<tr style="border:1px solid #333333;">
-				<td class="tituloCotizacion" style="border:1px solid #333333;">COMPRA</td>
-				<td class="tituloCotizacion" style="border:1px solid #333333;">VENTA</td>
+			<tr style="border:1px solid #15A346; height:30px;">
+				<td class="tituloCotizacion" style="border:1px solid #15A346;">COMPRA</td>
+				<td class="tituloCotizacion" style="border:1px solid #15A346;">VENTA</td>
 			</tr>
 
-			<tr style="border:1px solid #333333;">
-				<td class="tituloImporte" style="border:1px solid #333333;"><?php echo $tableroVALUE['compra']; ?></td>
-				<td class="tituloImporte" style="border:1px solid #333333;"><?php echo $tableroVALUE['venta']; ?></td>
+			<tr style="border:1px solid #15A346;">
+				<td class="tituloImporte" style="border:1px solid #15A346;"><?php echo $tableroVALUE['compra']; ?> x </td>
+				<td class="tituloImporte" style="border:1px solid #15A346;"><?php echo $tableroVALUE['venta']; ?></td>
 			</tr>
 <?php
 		$nroRow = $nroRow + 1;
