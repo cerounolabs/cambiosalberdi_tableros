@@ -47,7 +47,7 @@
 				width: 100%;
 				height: 100%;
 				color: #000000;
-				background-color: #15A346;
+				background-color: #006633;
 				margin: 0px;
 			}
 
@@ -79,24 +79,24 @@
 		</style>
 	</head>
 	<body>
-		<table style="width:100%; height:100%; text-align:center; border:1px solid #15A346;" border="1" cellpadding="0" cellspacing="0">
+		<table style="width:100%; height:100%; text-align:center; border:1px solid #006633;" border="1" cellpadding="0" cellspacing="0">
 <?php
 	$nroRow = 0;
 	
 	foreach ($JSONTablero01 as $tableroKEY => $tableroVALUE) {
 ?>
-			<tr style="border:1px solid #15A346; height:30px;">
-				<td class="tituloMoneda" style="border:1px solid #15A346;" colspan="2"><?php echo $tableroVALUE['moneda']; ?></td>
+			<tr style="border:1px solid #006633; height:30px;">
+				<td class="tituloMoneda" style="border:1px solid #006633;" colspan="2"><?php echo $tableroVALUE['moneda']; ?></td>
 			</tr>
 
-			<tr style="border:1px solid #15A346; height:30px;">
-				<td class="tituloCotizacion" style="border:1px solid #15A346;">COMPRA</td>
-				<td class="tituloCotizacion" style="border:1px solid #15A346;">VENTA</td>
+			<tr style="border:1px solid #006633; height:30px;">
+				<td class="tituloCotizacion" style="border:1px solid #006633;">COMPRA</td>
+				<td class="tituloCotizacion" style="border:1px solid #006633;">VENTA</td>
 			</tr>
 
-			<tr style="border:1px solid #15A346;">
-				<td class="tituloImporte" style="border:1px solid #15A346;"><?php echo $tableroVALUE['compra']; ?> x </td>
-				<td class="tituloImporte" style="border:1px solid #15A346;"><?php echo $tableroVALUE['venta']; ?></td>
+			<tr style="border:1px solid #006633;">
+				<td class="tituloImporte" style="border:1px solid #006633;"><?php echo $tableroVALUE['compra']; ?> x </td>
+				<td class="tituloImporte" style="border:1px solid #006633;"><?php echo $tableroVALUE['venta']; ?></td>
 			</tr>
 <?php
 		$nroRow = $nroRow + 1;

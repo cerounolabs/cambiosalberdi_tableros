@@ -168,7 +168,7 @@
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta http-equiv="refresh" content="5">
+		<meta http-equiv="refresh" content="10">
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quantico&display=swap">
 
@@ -184,7 +184,7 @@
 			body{
 				width: 100%;
 				height: 100%;
-				background-color: #15A346;
+				background-color: #006633;
 				color: #000000;
 				margin: 0px;
 			}
@@ -193,8 +193,8 @@
 				text-align: center;
 				Font-family: Arial Black;
 				color: #ffffff;
-				background-color: #15A346;
-				border:1px solid #15A346;
+				background-color: #006633;
+				border:1px solid #006633;
 				font-size: 8px;
 				letter-spacing: 0.30rem;
 			}
@@ -203,9 +203,9 @@
 				text-align: left;
 				font-family: 'Quantico', sans-serif;
 				font-weight: bold;
-				color: #cbff00;
-				background-color: #15A346;
-				border:1px solid #15A346;
+				color: #FFFFFF;
+				background-color: #006633;
+				border:1px solid #006633;
 				font-size: 10px;
 				letter-spacing: 0.05rem;
 			}
@@ -215,16 +215,16 @@
 				font-family: 'Quantico', sans-serif;
 				font-weight: bold;
 				color: #ffff00;
-				background-color: #15A346;
-				border:1px solid #15A346;
-				font-size: 14px;
+				background-color: #006633;
+				border:1px solid #006633;
+				font-size: 15px;
 				letter-spacing: 0.10rem;
 			}
 		</style>
 	</head>
 	<body>
-		<table style="width:100%; height:100%; text-align:center; border:1px solid #15A346;" border="1" cellpadding="0" cellspacing="0">
-			<tr style="border:1px solid #15A346;">
+		<table style="width:100%; height:100%; text-align:center; border:1px solid #006633;" border="1" cellpadding="0" cellspacing="0">
+			<tr style="border:1px solid #006633;">
 				<td class="tituloCotizacion"></td>
 				<td class="tituloCotizacion">COMPRA</td>
 				<td class="tituloCotizacion">VENTA</td>
@@ -234,7 +234,7 @@
 	
 	foreach ($JSONTablero01 as $tableroKEY => $tableroVALUE) {
 ?>
-			<tr style="border:1px solid #15A346;">
+			<tr style="border:1px solid #006633;">
 				<td class="tituloMoneda"><?php echo $tableroVALUE['moneda']; ?></td>
 				<td class="tituloImporte"><?php echo $tableroVALUE['compra']; ?></td>
 				<td class="tituloImporte"><?php echo $tableroVALUE['venta']; ?></td>
